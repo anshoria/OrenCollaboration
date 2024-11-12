@@ -3,21 +3,19 @@
 @section('title', 'About Us')
 
 @section('content')
+    <!-- Hero Section -->
     <section class="bg-white">
         <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-            <div class="font-light text-gray-500 sm:text-lg">
+            <div class="text-gray-500" data-aos="fade-right">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">About OrenCollaboration</h2>
-                <div class="prose sm:prose-lg">
-                    {!! $aboutContent->main_description !!}
-                </div>
+                <p class="text-gray-500 text-lg sm:text-xl">
+                    {{ $aboutContent->main_description }}
+                </p>
             </div>
-            <div class="grid grid-cols-2 gap-4 mt-8">
+            <div class="grid grid-cols-2 gap-4 mt-8" data-aos="fade-left">
                 <!-- Image 1 Container -->
                 <div class="relative w-full">
-                    <!-- Placeholder/Loader -->
                     <div class="absolute inset-0 animate-pulse rounded-lg"></div>
-                    
-                    <!-- Image 1 -->
                     <img 
                         class="w-full rounded-lg opacity-0 transition-opacity duration-300" 
                         src="{{ asset('storage/' . $aboutContent->hero_img) }}" 
@@ -29,10 +27,7 @@
     
                 <!-- Image 2 Container -->
                 <div class="relative w-full">
-                    <!-- Placeholder/Loader -->
                     <div class="absolute inset-0 animate-pulse rounded-lg mt-4 lg:mt-10"></div>
-                    
-                    <!-- Image 2 -->
                     <img 
                         class="mt-4 w-full lg:mt-10 rounded-lg opacity-0 transition-opacity duration-300" 
                         src="{{ asset('storage/' . $aboutContent->hero_img2) }}" 
@@ -45,10 +40,10 @@
         </div>
     </section>
 
-    <!-- Vision & Mission Section with Flowbite Components -->
+    <!-- Vision & Mission Section -->
     <section class="bg-white">
         <div class="py-16 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
-            <div class="max-w-screen-md mb-12 text-center mx-auto">
+            <div class="max-w-screen-md mb-12 text-center mx-auto" data-aos="zoom-in">
                 <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-4">
                     <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
@@ -56,7 +51,7 @@
                     Our Purpose
                 </span>
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">Vision & Mission</h2>
-                <p class="text-gray-500 sm:text-xl">{{ $aboutContent->vision_mission_section_description }}</p>
+                <p class="text-gray-500 text-lg sm:text-xl">{{ $aboutContent->vision_mission_section_description }}</p>     
             </div>
 
             <!-- Vision Section -->
@@ -64,11 +59,11 @@
                 <div class="items-center justify-between lg:flex">
                     <div class="mb-4 lg:mb-0">
                         <h3 class="mb-2 text-xl font-bold text-gray-900">Our Vision</h3>
-                        <p class="text-gray-500 sm:text-lg sm:pr-1">{{ $vision->vision }}</p>
+                        <p class="text-gray-500 sm:text-lg sm:pr-1" data-aos="zoom-in">{{ $vision->vision }}</p>
                     </div>
                     <!-- Stats -->
                     <div class="items-center sm:flex">
-                        <div class="mb-4 sm:mb-0 sm:mr-6">
+                        <div class="mb-4 sm:mb-0 sm:mr-6" data-aos="zoom-in" data-aos-delay="100">
                             <div class="flex items-center">
                                 <svg class="w-8 h-8 mb-1 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
@@ -79,7 +74,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div data-aos="zoom-in" data-aos-delay="200">
                             <div class="flex items-center">
                                 <svg class="w-8 h-8 mb-1 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
@@ -99,7 +94,7 @@
                 <h3 class="mb-4 text-xl font-bold text-gray-900">Our Mission</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     @foreach($missionCards as $card)
-                    <div class="p-6 bg-gray-50 rounded-lg">
+                    <div class="p-6 bg-gray-50 rounded-lg" data-aos="zoom-in" data-aos-delay="{{ $loop->index * 100 }}">
                         <div class="flex items-center mb-4">
                             <div class="inline-flex items-center justify-center w-12 h-12 mr-3 rounded-full bg-primary-100">
                                 <i class="{{ $card->icon }} text-xl text-primary-600"></i>
@@ -108,7 +103,8 @@
                         </div>
                         <p class="text-gray-500">{{ $card->mission }}</p>
                         <div class="mt-4">
-                            <button data-modal-target="missionModal{{ $card->id }}" data-modal-toggle="missionModal{{ $card->id }}" class="inline-flex items-center text-primary-600 hover:underline">
+                            <button data-modal-target="missionModal{{ $card->id }}" data-modal-toggle="missionModal{{ $card->id }}" 
+                                    class="inline-flex items-center text-primary-600 hover:underline">
                                 Learn more
                                 <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -143,7 +139,7 @@
                                     </div>
                                 </div>
                                 <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b">
-                                    <button type="button" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Get started</button>
+                                    <a href="{{ route('contact') }}" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Get started</a>
                                     <button type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10" data-modal-hide="missionModal{{ $card->id }}">Cancel</button>
                                 </div>
                             </div>
@@ -155,26 +151,24 @@
         </div>
     </section>
 
+    <!-- Team Section -->
     <section class="bg-white">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <!-- Header Section -->
-            <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+            <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16" data-aos="zoom-in">
                 <h2 class="mb-4 text-3xl md:text-4xl tracking-tight font-extrabold text-gray-900">Our Team</h2>
-                <p class="font-light text-gray-500 text-base sm:text-lg md:text-xl">{{ $aboutContent->team_section_description }}</p>
+                <p class="text-lg text-gray-500 md:text-xl">{{ $aboutContent->team_section_description }}</p>
             </div>
     
             <!-- Team Grid -->
             <div class="grid gap-8 mb-6 lg:mb-16 grid-cols-1 lg:grid-cols-2">
                 @forelse($teamMembers->where('is_active', true)->sortBy('display_order') as $member)
-                <div class="bg-gray-50 rounded-lg shadow flex flex-col sm:flex-row">
-                    <!-- Image Container -->
-                    <div class="w-full sm:w-1/2 md:w-2/5 lg:w-5/12 overflow-hidden relative">
-                        <!-- Placeholder/Loader -->
+                <div class="bg-gray-50 rounded-lg shadow flex flex-col sm:flex-row" data-aos="zoom-in" data-aos-delay="{{ $loop->index * 100 }}">
+                    <!-- Member content structure remains the same -->
+                    <div class="w-full sm:w-1/2 md:w-2/5 lg:w-5/12 overflow-hidden relative rounded-lg">
                         <div class="absolute inset-0 animate-pulse rounded-lg bg-gray-200"></div>
-                        
-                        <!-- Image -->
                         <img 
-                            class="w-full h-56 lg:h-full object-cover rounded-lg cursor-pointer hover:scale-110 transition duration-300 opacity-0" 
+                            class="w-full h-56 lg:h-full object-cover cursor-pointer hover:scale-110 transition duration-300 opacity-0" 
                             src="{{ asset('storage/' . $member->image) }}" 
                             alt="{{ $member->name }}"
                             loading="lazy"
@@ -182,14 +176,13 @@
                         >
                     </div>
     
-                    <!-- Content Container -->
                     <div class="flex flex-col justify-between p-4 sm:p-5 lg:p-6 w-full sm:w-1/2 md:w-3/5 lg:w-7/12">
                         <div>
                             <h3 class="text-xl font-bold tracking-tight text-gray-900 mb-1">
                                 {{ $member->name }}
                             </h3>
-                            <span class="text-gray-500 text-sm md:text-base">{{ $member->position }}</span>
-                            <p class="mt-3 mb-4 font-light text-gray-500 text-sm md:text-base">{{ $member->description }}</p>
+                            <span class="text-gray-500">{{ $member->position }}</span>
+                            <p class="mt-3 mb-4 text-gray-500">{{ $member->description }}</p>
                         </div>
     
                         <!-- Social Media Links -->

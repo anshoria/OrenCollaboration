@@ -8,6 +8,9 @@
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="{{ asset('storage/' . $settings->brand_logo) }}">
     
+    {{-- data-aos --}}
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -224,5 +227,16 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    {{-- data-aos --}}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 400,
+                once: true,
+                easing: 'ease-out'
+            });
+        });
+    </script>
 </body>
 </html>
